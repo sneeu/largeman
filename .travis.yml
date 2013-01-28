@@ -3,5 +3,6 @@ python:
   - "2.6"
   - "2.7"
   - "3.3"
-install: "pip install unittest2 --use-mirrors"
+install:
+  - "if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install unittest2; fi"
 script: nosetests
