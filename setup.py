@@ -13,7 +13,7 @@ from largeman import __version__
 setup(
     name='Largeman',
     version='.'.join(str(x) for x in __version__),
-    description='library for working with finite-state machines',
+    description='A little library for making, and using state machines.',
     url='https://github.com/sneeu/largeman',
     author='John Sutherland',
     author_email='john@sneeu.com',
@@ -27,5 +27,6 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.3',
     ),
 )
