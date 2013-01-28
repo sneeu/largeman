@@ -11,7 +11,7 @@ from largeman import __version__
 
 
 setup(
-    name='Largeman',
+    name='largeman',
     version='.'.join(str(x) for x in __version__),
     description='A little library for making, and using state machines.',
     url='https://github.com/sneeu/largeman',
