@@ -54,22 +54,22 @@ class StateTestCase(unittest.TestCase):
 
     def test_create_state(self):
         state = self.sm('on')
-        self.assertEqual(state.current(), 'on')
+        self.assertEqual(state.current, 'on')
 
         state2 = self.sm('off')
-        self.assertEqual(state2.current(), 'off')
+        self.assertEqual(state2.current, 'off')
 
     def test_transition(self):
         state = self.sm('on')
-        self.assertEqual(state.current(), 'on')
+        self.assertEqual(state.current, 'on')
 
         state.turn_off()
-        self.assertEqual(state.current(), 'off')
+        self.assertEqual(state.current, 'off')
 
         self.assertRaises(InvalidTransition, state.turn_off)
 
         state.turn_on()
-        self.assertEqual(state.current(), 'on')
+        self.assertEqual(state.current, 'on')
 
     def test_available_transitions(self):
         state = self.sm('on')
@@ -78,5 +78,5 @@ class StateTestCase(unittest.TestCase):
 
         state.turn_off()
 
-        self.assertEqual(state.current(), 'off')
+        self.assertEqual(state.current, 'off')
         self.assertEqual(state.available_transitions(), ['turn_on'])

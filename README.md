@@ -8,7 +8,7 @@ A little library for making, and using state machines.
 
 ## Usage
 
-    from largeman import StateMachine, State
+    from largeman import StateMachine
 
     sm = StateMachine()
     sm.add_state('on')
@@ -17,13 +17,13 @@ A little library for making, and using state machines.
     sm.add_transition('on', 'turn_off', 'off')
     sm.add_transition('off', 'turn_on', 'on')
 
-    s = State(sm, 'off')
+    s = sm('off')
 
     s.turn_on()
-    assert s.current() == 'on'
+    assert s.current == 'on'
 
     s.turn_off()
-    assert s.current() == 'off'
+    assert s.current == 'off'
 
 
 ## Install

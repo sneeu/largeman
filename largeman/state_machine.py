@@ -64,7 +64,8 @@ class State(object):
     def available_transitions(self):
         return [t[1]
             for t in self._machine.transitions
-            if t[0] == self.current()]
+            if t[0] == self.current]
 
+    @property
     def current(self):
         return self._current
