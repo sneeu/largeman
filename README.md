@@ -8,22 +8,24 @@ A little library for making, and using state machines.
 
 ## Usage
 
-    from largeman import StateMachine
+```python
+from largeman import StateMachine
 
-    sm = StateMachine()
-    sm.add_state('on')
-    sm.add_state('off')
+sm = StateMachine()
+sm.add_state('on')
+sm.add_state('off')
 
-    sm.add_transition('on', 'turn_off', 'off')
-    sm.add_transition('off', 'turn_on', 'on')
+sm.add_transition('on', 'turn_off', 'off')
+sm.add_transition('off', 'turn_on', 'on')
 
-    s = sm('off')
+s = sm('off')
 
-    s.turn_on()
-    assert s.current == 'on'
+s.turn_on()
+assert s.current == 'on'
 
-    s.turn_off()
-    assert s.current == 'off'
+s.turn_off()
+assert s.current == 'off'
+```
 
 
 ## Install
